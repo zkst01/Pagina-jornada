@@ -1,5 +1,3 @@
-// filepath: c:\Users\Alumno\Desktop\67\pagina-programacion\script.js
-
 document.addEventListener('DOMContentLoaded', function() {
     const loopExampleButton = document.getElementById('loopExample');
     const conditionalExampleButton = document.getElementById('conditionalExample');
@@ -31,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (booleanExampleButton) {
         booleanExampleButton.addEventListener('click', function() {
-            const isTrue = true; // Example boolean
+            const isTrue = true;
             booleanOutput.innerHTML = `El valor booleano es: ${isTrue}`;
         });
     }

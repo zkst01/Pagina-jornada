@@ -9,41 +9,338 @@
 <body>
     <header>
         <h1>Introducción a la Programación</h1>
-        <p>Aprende los conceptos básicos de la programación, incluyendo bucles, condicionales y el tipo de dato booleano.</p>
+        <p>Esta pagina fue creada con la intencion de que la gente sepa que es la programacion, dando algunos ejemplos de cogidos sencillos.</p>
     </header>
+
+    <section>
+       <h2>Acerca de la programacion</h2> 
+       <p>Además de aprender JavaScript, también vas a conocer los principios básicos de la programación.
+        Spoiler: programar es difícil. Las reglas son simples, pero los programas que creás con ellas se vuelven un pequeño laberinto donde, sí, podés perderte.
+        Habrá momentos en los que te frustres (mucho). Vas a tener que digerir cosas nuevas, combinarlas y hacer conexiones mentales como si fueras un detective de código. Pero tranquilo: no significa que seas malo en esto, solo necesitás paciencia.
+        Tomate descansos, releé, y asegurate de entender los ejemplos. Aprender cuesta, pero cada cosa que entendés te hace más fuerte.
+
+        <pre>“Cuando la acción deja de servirte, reúne información; cuando la información deja de servirte, duerme...”
+—Ursula K. Le Guin</pre>
+
+        <pre>Un programa puede ser muchas cosas:
+Texto que escribe un programador.
+La fuerza que hace que la computadora haga cosas.
+Datos que viven en la memoria de la máquina.</pre>
+
+        <p>Y aunque las computadoras solo hacen cosas sencillas y tontas, lo hacen a una velocidad ridículamente alta, lo que les permite lograr cosas bastante complejas.</p>
+
+        <P>Un programa es como un edificio hecho de ideas: no pesa, no cuesta materiales y crece con tus dedos sobre el teclado. Pero si no tenés cuidado, puede convertirse en una torre de caos donde ni vos entendés qué hiciste.
+        Por eso, el verdadero arte de programar está en controlar la complejidad.</P>
+
+        <p>Algunos programadores creen que la mejor forma de hacerlo es seguir unas pocas técnicas súper estrictas, las llamadas “mejores prácticas”.
+        Se encierran en su zona segura de reglas y orden…
+        Pero eso, además de ser aburrido, ¡es ineficaz!</p>
+
+        <p>La programación todavía está creciendo, cambiando y necesita creatividad.
+        Vas a cometer errores (muchos), pero de eso se trata: de entenderlos y aprender.
+        Con el tiempo vas a desarrollar tu propio sentido de lo que hace que un programa sea realmente bueno.</p> 
+
+
+        <h2>Por qué el lenguaje importa</h2>
+        <p>Al principio de la informática no existían los lenguajes de programación.
+        Los programas se veían más o menos así:
+
+        <pre><code>00110001 00000000 00000000
+00110001 00000001 00000001
+...</pre></code>
+
+
+        <p>Sí, una sopa de unos y ceros. Ese código, aunque no lo creas, suma los números del 1 al 10 e imprime 55.
+        En aquellos tiempos, los programadores configuraban interruptores o perforaban tarjetas para decirle a la computadora qué hacer. Imaginate lo aburrido (y propenso a errores) que era eso.
+        Pero bueno, al menos te hacía sentir como un mago del código binario.</p>
+
+
+        <pre>Cada línea de ese programa representaba una instrucción, como por ejemplo:
+ Guardar el número 0 en una memoria.
+ el 1 en otra.
+ Sumar, restar, comparar, repetir, imprimir…
+Era más legible que los bits, pero todavía difícil de entender.</pre>
+
+        <p>Después, alguien tuvo la genial idea de usar nombres en lugar de números.
+        Así, el mismo programa se podía leer así:</p>
+
+        <pre><code>Establecer "total" como 0.
+Establecer "cuenta" como 1.
+[loop]
+Establecer "comparar" como "cuenta".
+Restar 11 de "comparar".
+Si "comparar" es cero, ir a [fin].
+Agregar "cuenta" a "total".
+Agregar 1 a "cuenta".
+Ir a [loop].
+[fin]
+Imprimir "total".</code></pre>
+
+
+        <p>Ahora sí se entiende un poco más, ¿no?
+        El programa suma los números del 1 al 10, comprobando cuándo detenerse.
+        Eso sí: la computadora de la época solo sabía verificar si algo era cero, así que había que ser ingenioso para que funcionara.</p>
+
+        <p>Cuando llego JavaScript la cosa se simplifico muchísimo:</p>
+
+        <pre><code>let total = 0, cuenta = 1;
+while (cuenta <= 10) {
+total += cuenta;
+cuenta += 1;
+}
+console.log(total);
+// → 55</code></pre>
+
+
+       <p>Ya no hay que manejar saltos complicados ni crear valores temporales.
+        El while se encarga de repetir mientras la condición se cumpla, y console.log muestra el resultado.
+        Los lenguajes modernos ahorran detalles aburridos y hacen que programar sea más fluido.</p>
+
+
+        <p>Con aún más herramientas, el mismo programa puede escribirse así:</p>
+
+        <pre><code>console.log(suma(rango(1, 10)));
+// → 55</code></pre>
+
+
+        <p>Mucho más corto y entendible.
+        Esto muestra que el mismo programa puede expresarse de muchas formas: largas o cortas, confusas o claras.
+        Un buen lenguaje de programación te deja hablar con la computadora en un nivel más alto, evitando detalles innecesarios y dándote bloques listos para construir tus propias ideas.</p>
+
+
+        <h2>¿Qué es JavaScript?</h2>
+        <p>En 1995, JavaScript apareció como una forma de darle vida a las páginas web del navegador Netscape Navigator.
+        Gracias a él, hoy tenemos aplicaciones web modernas: esas que podés usar sin tener que recargar la página cada vez que hacés clic.</p>
+
+        <p>También se usa en páginas más simples para agregar interactividad, animaciones y efectos ingeniosos.</p>
+
+        <p>Java ≠ JavaScript (aunque suenen parecidos)</p>
+
+        <p>A pesar del nombre, JavaScript y Java no tienen casi nada que ver.
+El nombre “JavaScript” fue un truco de marketing.</p>
+
+        <p>ECMAScript:</p>
+
+        <p>Cuando JavaScript empezó a usarse fuera de Netscape, se necesitó un estándar para que todos los navegadores hablaran el mismo “idioma”.
+Así nació ECMAScript, creado por Ecma International.
+En la práctica, JavaScript y ECMAScript son lo mismo, solo con nombres diferentes.</p>
+
+
+        <p>Muchos programadores dicen cosas feas sobre JavaScript… y algunas son ciertas.
+Cuando uno empieza, el lenguaje parece aceptar cualquier cosa, incluso errores, y hace cosas que no esperabas.
+La idea era hacerlo más fácil para principiantes, pero a veces solo hace más difícil encontrar los errores.</p>
+
+        <p>Aun así, esa flexibilidad tiene su encanto: te permite hacer cosas imposibles en lenguajes más estrictos.
+Después de entenderlo bien, muchos —incluido su autor original— aprenden a quererlo.</p>
+
+
+        <pre>Evolución del lenguaje
+
+ECMAScript 3 (2000-2010): la versión más usada en los inicios.
+
+Versión 4: intentó revolucionar el lenguaje, pero fue cancelada en 2008.
+
+Versión 5 (2009): más simple, pero estable.
+
+2015: llega una gran actualización (la famosa ES6) que cambió todo.
+
+Desde entonces, salen mejoras pequeñas cada año.</pre>
+
+        <p>Los navegadores modernos se van actualizando para seguirle el ritmo, y los programadores intentan que el código viejo siga funcionando.
+En este texto se usa JavaScript versión 2017 (ES8).</p>
+
+
+        <pre>JavaScript ya no vive solo en las páginas web.
+También se usa en:
+Bases de datos como MongoDB y CouchDB,
+Y en servidores y apps de escritorio gracias a Node.js.</pre>
+
+        <p>En resumen, JavaScript empezó como un lenguaje para hacer que las webs se movieran… y terminó conquistando el mundo.</p>
+
+
+        <h2>Lenguajes de programación.</h2>
+        <p>Lenguajes más usados y modernos</p>
+
+        <pre>Python
+Muy popular y fácil de aprender. Se usa en inteligencia artificial, ciencia de datos, web, automatización, y casi todo.
+Ideal para principiantes.</pre>
+
+        <pre>JavaScript
+Lenguaje del navegador. Hace que las páginas web sean interactivas. También se usa en servidores con Node.js.
+Sin él, internet sería aburrido.</pre>
+
+        <pre>Java
+Lenguaje muy estable y usado en empresas, Android y servidores.
+“Escribe una vez, corre en todos lados.”</pre>
+
+        <pre>C
+Uno de los más antiguos aún usados. Es rápido y base de muchos otros lenguajes.
+Perfecto para entender cómo piensan las computadoras.</pre>
+
+        <pre>C++
+Versión mejorada de C con objetos. Se usa en videojuegos, programas de alto rendimiento y motores gráficos.
+Potente, pero complicado.</pre>
+
+        <pre>C#
+Creado por Microsoft. Se usa para apps, videojuegos (con Unity) y programas de Windows.
+Un equilibrio entre potencia y facilidad.</pre>
+
+        <pre>Go (Golang)
+Hecho por Google. Es simple, rápido y muy bueno para servidores y sistemas grandes.
+Rápido como C, fácil como Python.</pre>
+
+        <pre>Rust
+Seguro y moderno. Evita errores comunes y es muy rápido.
+Cada vez más popular para sistemas y videojuegos.</pre>
+
+        <pre>PHP
+Muy usado en sitios web (como WordPress).
+Muchos lo critican, pero sigue alimentando buena parte de Internet.</pre>
+
+        <pre>Ruby
+Elegante y fácil de leer. Con Ruby on Rails se hacen sitios web rápido.
+“La felicidad del programador” según sus creadores.</pre>
+
+        <pre>Swift
+Lenguaje de Apple para apps de iPhone, iPad y Mac.
+Rápido, moderno y con diseño limpio.</pre>
+
+        <pre>Kotlin
+Lenguaje para Android más moderno que Java.
+Reemplaza poco a poco al viejo Java móvil.</pre>
+
+        <pre>TypeScript
+Versión mejorada de JavaScript con tipos. Hace los programas más seguros y organizados.
+El favorito de los desarrolladores web serios.</pre>
+
+        <pre>SQL
+Lenguaje para manejar bases de datos.
+Sin él, las apps no sabrían dónde guardar nada.</pre>
+
+        <pre>Dart
+Lenguaje de Google usado con Flutter para crear apps móviles, web y escritorio.
+“Un solo código para todos los dispositivos.”</pre>
+
+        <pre>R
+Usado por científicos y estadísticos para analizar datos.
+El lenguaje de los números.</pre>
+
+        <pre>Julia
+Diseñado para cálculos matemáticos y científicos rápidos.
+Combina velocidad con facilidad.</pre>
+
+        <pre>Lua
+Pequeño y ligero, muy usado en videojuegos para scripts.
+Fácil de integrar en otros programas.</pre>
+
+
+        <p>Lenguajes nuevos o en crecimiento</p>
+
+        <pre>Zig
+Alternativa moderna a C, busca ser más segura y simple.
+Promete mucho para el futuro del desarrollo de sistemas.</pre>
+
+
+        <p>Lenguajes antiguos pero legendarios</p>
+
+        <pre>Fortran
+Uno de los primeros lenguajes. Se usa aún en cálculos científicos.
+Nació en los años 50 y sigue vivo.</pre>
+
+        <pre>COBOL
+Lenguaje de bancos y sistemas antiguos.
+Si ves un cajero automático, puede que corra con COBOL.</pre>
+
+        <pre>ALGOL
+Influyó en casi todos los lenguajes modernos.
+El “abuelo” de C, Java y Pascal.</pre>
+
+        <pre>BASIC
+Lenguaje sencillo para aprender a programar.
+El primer amor de muchos programadores en los 80.</pre>
+
+        <pre>Lisp
+Usado en inteligencia artificial y teoría de la programación.
+Muy viejo, pero increíblemente avanzado para su tiempo.</pre>
+
+        <pre>Prolog
+Lenguaje lógico, usado en IA y resolución de problemas.
+Piensa como un detective lógico.</pre>
+
+        <pre>Pascal
+Popular en educación en los 80 y 90.
+Ideal para enseñar conceptos básicos.</pre>
+
+        <pre>Assembly
+Lenguaje más cercano al hardware.
+Extremadamente rápido, pero difícil de leer.</pre>
+
+
+        <p>Lenguajes raros o experimentales</p>
+
+        <pre>Brainfuck
+Diseñado para ser casi imposible de entender.
+Más un chiste que un lenguaje útil.</pre>
+
+        <pre>Malbolge
+Hecho para ser el más difícil de programar del mundo.
+Nadie lo usa… por razones obvias.</pre>
+
+        <pre>INTERCAL
+Lenguaje parodia de los 70, creado solo para ser extraño.
+“Para programadores con mucho tiempo libre.”</pre>
+
+        <pre>APL
+Lenguaje matemático con símbolos raros.
+Súper potente pero difícil de leer.</pre>
+
+        <pre>J
+Versión moderna de APL, sin tantos símbolos.
+Potente para cálculos, aunque poco usado.</pre>
+
+    </section>
     
-    <section id="bucles">
-        <h2>Bucles</h2>
-        <p>Los bucles permiten ejecutar un bloque de código varias veces. Aquí hay un ejemplo de un bucle <code>for</code>:</p>
-        <pre><code>for (let i = 0; i &lt; 5; i++) {
-    console.log(i);
-}</code></pre>
-        <button id="loopExample">Ejecutar Bucle</button>
-        <div id="resultadoBucles"></div>
-    </section>
+    
+    <section>
+        <h2>Ejemplos y Ejercicios.</h2>
+        <section id="bucles">
+            <h2>Bucles</h2>
+            <p>Los bucles permiten ejecutar un bloque de código varias veces. Aquí hay un ejemplo de un bucle <code>for</code>:</p>
+            <pre><code>for (let i = 0; i &lt; 5; i++) {
+        console.log(i);
+    }</code></pre>
+            <button id="loopExample">Ejecutar Bucle</button>
+            <div id="resultadoBucles"></div>
+        </section>
 
-    <section id="condicionales">
-        <h2>Condicionales</h2>
-        <p>Las estructuras condicionales permiten ejecutar código basado en condiciones. Aquí hay un ejemplo:</p>
-        <pre><code>if (x &gt; 10) {
-    console.log("x es mayor que 10");
-} else {
-    console.log("x es 10 o menor");
-}</code></pre>
-        <button id="conditionalExample">Ejecutar Condicional</button>
-        <div id="resultadoCondicionales"></div>
-    </section>
+        <section id="condicionales">
+            <h2>Condicionales</h2>
+            <p>Las estructuras condicionales permiten ejecutar código basado en condiciones. Aquí hay un ejemplo:</p>
+            <pre><code>if (x &gt; 10) {
+        console.log("x es mayor que 10");
+    } else {
+        console.log("x es 10 o menor");
+    }</code></pre>
+            <button id="conditionalExample">Ejecutar Condicional</button>
+            <div id="resultadoCondicionales"></div>
+        </section>
 
-    <section id="booleanos">
-        <h2>Tipo de Dato Booleano</h2>
-        <p>Los booleanos son valores que pueden ser <code>true</code> o <code>false</code>. Aquí hay un ejemplo:</p>
-        <pre><code>let esVerdadero = true;
-if (esVerdadero) {
-    console.log("Es verdadero");
-}</code></pre>
-        <button id="booleanExample">Ejecutar Booleano</button>
-        <div id="resultadoBooleanos"></div>
+        <section id="booleanos">
+            <h2>Tipo de Dato Booleano</h2>
+            <p>Los booleanos son valores que pueden ser <code>true</code> o <code>false</code>. Aquí hay un ejemplo:</p>
+            <pre><code>let esVerdadero = true;
+    if (esVerdadero) {
+        console.log("Es verdadero");
+    }</code></pre>
+            <button id="booleanExample">Ejecutar Booleano</button>
+            <div id="resultadoBooleanos"></div>
+        </section>
+
+        <section>
+            <h2></h2>
+        </section>
     </section>
+    
 
 
     <script src="script.js"></script>
