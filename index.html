@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a la Programación</title>
+</head>
+<body>
+    <header>
+        <h1>Introducción a la Programación</h1>
+        <p>Aprende los conceptos básicos de la programación, incluyendo bucles, condicionales y el tipo de dato booleano.</p>
+    </header>
+    
+    <section id="bucles">
+        <h2>Bucles</h2>
+        <p>Los bucles permiten ejecutar un bloque de código varias veces. Aquí hay un ejemplo de un bucle <code>for</code>:</p>
+        <pre><code>for (let i = 0; i &lt; 5; i++) {
+    console.log(i);
+}</code></pre>
+        <button id="loopExample">Ejecutar Bucle</button>
+        <div id="resultadoBucles"></div>
+    </section>
+
+    <section id="condicionales">
+        <h2>Condicionales</h2>
+        <p>Las estructuras condicionales permiten ejecutar código basado en condiciones. Aquí hay un ejemplo:</p>
+        <pre><code>if (x &gt; 10) {
+    console.log("x es mayor que 10");
+} else {
+    console.log("x es 10 o menor");
+}</code></pre>
+        <button id="conditionalExample">Ejecutar Condicional</button>
+        <div id="resultadoCondicionales"></div>
+    </section>
+
+    <section id="booleanos">
+        <h2>Tipo de Dato Booleano</h2>
+        <p>Los booleanos son valores que pueden ser <code>true</code> o <code>false</code>. Aquí hay un ejemplo:</p>
+        <pre><code>let esVerdadero = true;
+if (esVerdadero) {
+    console.log("Es verdadero");
+}</code></pre>
+        <button id="booleanExample">Ejecutar Booleano</button>
+        <div id="resultadoBooleanos"></div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
