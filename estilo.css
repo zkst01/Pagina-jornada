@@ -9,12 +9,24 @@ body {
 
 h1, h2, h3 {
     color: #ffffff;
+    text-align: center;
 }
 p, pre {
     color: #ffffff;
     line-height: 1.6;
     font-family: 'Arial', sans-serif;
 }
+b   {
+    color: #ffffff;
+    text-align: justify;
+}
+
+ul{ 
+    color: #ffffff;
+    text-align: center;
+
+}
+
 
 code {
     color: #ffffff;
@@ -22,7 +34,13 @@ code {
     padding: 4px 6px;
     border-radius: 10px;
     font-family: 'Courier New', Courier, monospace;
+    white-space: pre;
+    display: inline-block;  
+    margin: 0;              
+    line-height: 1.2;       
 }
+
+
 
 .container {
     max-width: 800px;
