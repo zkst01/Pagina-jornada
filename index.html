@@ -14,58 +14,24 @@
 
     <section>
        <h2>Acerca de la programacion</h2> 
-       <p><ul>Además de aprender JavaScript, también vas a conocer los principios básicos de la programación.
-        Spoiler: programar es difícil. Las reglas son simples, pero los programas que creás con ellas se vuelven un pequeño laberinto donde, sí, podés perderte.
-        Habrá momentos en los que te frustres (mucho). Vas a tener que digerir cosas nuevas, combinarlas y hacer conexiones mentales como si fueras un detective de código. Pero tranquilo: no significa que seas malo en esto, solo necesitás paciencia.
-        Tomate descansos, releé, y asegurate de entender los ejemplos. Aprender cuesta, pero cada cosa que entendés te hace más fuerte.
+        <p><ul>Aprender programación y JavaScript requiere paciencia y práctica. Programar puede ser complicado y frustrante, pero cada error es una oportunidad para aprender. Un programa es una construcción de ideas que puede volverse complejo si no se controla. Aunque existen técnicas y mejores prácticas, la creatividad y el aprendizaje constante son esenciales para mejorar como programador.</p>
+</ul>
+        <pre><ul>“Cuando la acción deja de servirte, reúne información; cuando la información deja de servirte, duerme...” —Ursula K. Le Guin</pre>
 
-        <pre>“Cuando la acción deja de servirte, reúne información; cuando la información deja de servirte, duerme...”
-—Ursula K. Le Guin</pre>
-
-        <pre>Un programa puede ser muchas cosas:
-Texto que escribe un programador.
-La fuerza que hace que la computadora haga cosas.
-Datos que viven en la memoria de la máquina.</pre>
-
-        <p>Y aunque las computadoras solo hacen cosas sencillas y tontas, lo hacen a una velocidad ridículamente alta, lo que les permite lograr cosas bastante complejas.</p>
-
-        <P>Un programa es como un edificio hecho de ideas: no pesa, no cuesta materiales y crece con tus dedos sobre el teclado. Pero si no tenés cuidado, puede convertirse en una torre de caos donde ni vos entendés qué hiciste.
-        Por eso, el verdadero arte de programar está en controlar la complejidad.</P>
-
-        <p>Algunos programadores creen que la mejor forma de hacerlo es seguir unas pocas técnicas súper estrictas, las llamadas “mejores prácticas”.
-        Se encierran en su zona segura de reglas y orden…
-        Pero eso, además de ser aburrido, ¡es ineficaz!</p>
-
-        <p>La programación todavía está creciendo, cambiando y necesita creatividad.
-        Vas a cometer errores (muchos), pero de eso se trata: de entenderlos y aprender.
-        Con el tiempo vas a desarrollar tu propio sentido de lo que hace que un programa sea realmente bueno.</p> 
 </ul>
 
         <h2>¿Por qué el lenguaje importa?</h2>
-        <p>Al principio de la informática no existían los lenguajes de programación.
-        Los programas se veían más o menos así:
 
-<pre><code>00110001 00000000 00000000
+        <p>Al comienzo de la informática, no existían lenguajes de programación como los conocemos hoy. Los programadores debían escribir instrucciones directamente en código binario (unos y ceros), lo cual era difícil de entender y muy propenso a errores.</p>
+       
+        <pre><code>00110001 00000000 00000000
 00110001 00000001 00000001
 ...</code></pre>
+<p>Para realizar tareas simples, como sumar números, había que manejar instrucciones muy técnicas y poco intuitivas.</p>
 
+<p>Con el tiempo, se comenzaron a usar nombres y símbolos en lugar de números, lo que permitió representar las acciones de forma más clara. Así surgieron los primeros lenguajes de bajo nivel, donde ya se podían entender mejor las operaciones que realizaba un programa. Como por ejemplo el siguiente codigo:</p>
 
-
-        <p>Sí, una sopa de unos y ceros. Ese código, aunque no lo creas, suma los números del 1 al 10 e imprime 55.
-        En aquellos tiempos, los programadores configuraban interruptores o perforaban tarjetas para decirle a la computadora qué hacer. Imaginate lo aburrido (y propenso a errores) que era eso.
-        Pero bueno, al menos te hacía sentir como un mago del código binario.</p>
-
-
-        <pre>Cada línea de ese programa representaba una instrucción, como por ejemplo:
- Guardar el número 0 en una memoria.
- el 1 en otra.
- Sumar, restar, comparar, repetir, imprimir…
-Era más legible que los bits, pero todavía difícil de entender.</pre>
-
-        <p>Después, alguien tuvo la genial idea de usar nombres en lugar de números.
-        Así, el mismo programa se podía leer así:</p>
-
-        <pre><code>Establecer "total" como 0.
+<pre><code> Establecer "total" como 0.
 Establecer "cuenta" como 1.
 [loop]
 Establecer "comparar" como "cuenta".
@@ -75,16 +41,10 @@ Agregar "cuenta" a "total".
 Agregar 1 a "cuenta".
 Ir a [loop].
 [fin]
-Imprimir "total".</code></pre>
+Imprimir "total"</code></pre>
 
-
-        <p>Ahora sí se entiende un poco más, ¿no?
-        El programa suma los números del 1 al 10, comprobando cuándo detenerse.
-        Eso sí: la computadora de la época solo sabía verificar si algo era cero, así que había que ser ingenioso para que funcionara.</p>
-
-        <p>Cuando llego JavaScript la cosa se simplifico muchísimo:</p>
-
-        <pre><code>let total = 0, cuenta = 1;
+<p>Luego, aparecieron los lenguajes de alto nivel (como JavaScript), que simplifican aún más la escritura de programas. Estos lenguajes permiten usar estructuras como bucles (while) y funciones (console.log) que hacen el código más fácil de leer, escribir y mantener.</p>
+<pre><code>let total = 0, cuenta = 1;
 while (cuenta <= 10) {
 total += cuenta;
 cuenta += 1;
@@ -92,48 +52,24 @@ cuenta += 1;
 console.log(total);
 // → 55</code></pre>
 
-
-       <p>Ya no hay que manejar saltos complicados ni crear valores temporales.
-        El while se encarga de repetir mientras la condición se cumpla, y console.log muestra el resultado.
-        Los lenguajes modernos ahorran detalles aburridos y hacen que programar sea más fluido.</p>
-
-
-        <p>Con aún más herramientas, el mismo programa puede escribirse así:</p>
-
-        <pre><code>console.log(suma(rango(1, 10)));
+<p>Incluso, con herramientas modernas, una operación compleja se puede reducir a una sola línea clara y comprensible.</p>
+<pre><code>console.log(suma(rango(1, 10)));
 // → 55</code></pre>
 
-
-        <p>Mucho más corto y entendible.
-        Esto muestra que el mismo programa puede expresarse de muchas formas: largas o cortas, confusas o claras.
-        Un buen lenguaje de programación te deja hablar con la computadora en un nivel más alto, evitando detalles innecesarios y dándote bloques listos para construir tus propias ideas.</p>
-
-
         <h2>¿Qué es JavaScript?</h2>
-        <p>En 1995, JavaScript apareció como una forma de darle vida a las páginas web del navegador Netscape Navigator.
-        Gracias a él, hoy tenemos aplicaciones web modernas: esas que podés usar sin tener que recargar la página cada vez que hacés clic.</p>
-
-        <p>También se usa en páginas más simples para agregar interactividad, animaciones y efectos ingeniosos.</p>
-
-        <p>Java ≠ JavaScript (aunque suenen parecidos)</p>
+        <p>JavaScript es un lenguaje de programación que se usa principalmente para hacer páginas web interactivas.
+        Por ejemplo, cuando ves menús desplegables, animaciones, formularios dinámicos o juegos en una página web, probablemente están hechos con JavaScript.</p>
 
         <p>A pesar del nombre, JavaScript y Java no tienen casi nada que ver.
 El nombre “JavaScript” fue un truco de marketing.</p>
 
-        <p>ECMAScript:</p>
+        <p>¿Que es ECMAScript?</p>
 
-        <p>Cuando JavaScript empezó a usarse fuera de Netscape, se necesitó un estándar para que todos los navegadores hablaran el mismo “idioma”.
-Así nació ECMAScript, creado por Ecma International.
-En la práctica, JavaScript y ECMAScript son lo mismo, solo con nombres diferentes.</p>
+        <p>Cuando JavaScript empezó a usarse en diferentes navegadores, fue necesario crear un estándar para que todos funcionaran de forma compatible.
+Así nació ECMAScript, una especificación técnica creada por Ecma International</p>
 
 
-        <p>Muchos programadores dicen cosas feas sobre JavaScript… y algunas son ciertas.
-Cuando uno empieza, el lenguaje parece aceptar cualquier cosa, incluso errores, y hace cosas que no esperabas.
-La idea era hacerlo más fácil para principiantes, pero a veces solo hace más difícil encontrar los errores.</p>
-
-        <p>Aun así, esa flexibilidad tiene su encanto: te permite hacer cosas imposibles en lenguajes más estrictos.
-Después de entenderlo bien, muchos —incluido su autor original— aprenden a quererlo.</p>
-
+        <p>ECMAScript es el estándar y JavaScript es su implementación más famosa. Para la mayoría de los desarrolladores, JavaScript y ECMAScript son prácticamente lo mismo.
 
         <pre>Evolución del lenguaje
 
@@ -335,6 +271,10 @@ Potente para cálculos, aunque poco usado.</li></pre>
     }</code></pre>
             <button id="booleanExample">Ejecutar Booleano</button>
             <div id="resultadoBooleanos"></div>
+        </section>
+
+        <section>
+                
         </section>
 
         <section>
