@@ -5,6 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const bucleOutput = document.getElementById('resultadoBucles');
     const condicionalOutput = document.getElementById('resultadoCondicionales');
     const booleanOutput = document.getElementById('resultadoBooleanos');
+    const functionExampleButton = document.getElementById('functionExample');
+    const functionOutput = document.getElementById('resultadoFunciones');
+    const operatorExampleButton = document.getElementById('operatorExample');
+    const operatorOutput = document.getElementById('resultadoOperadores');
+    const arrayExampleButton = document.getElementById('arrayExample');
+    const arrayOutput = document.getElementById('resultadoArrays');
 
     if (loopExampleButton) {
         loopExampleButton.addEventListener('click', function() {
@@ -32,5 +38,37 @@ document.addEventListener('DOMContentLoaded', function() {
             const isTrue = true;
             booleanOutput.innerHTML = `El valor booleano es: ${isTrue}`;
         });
+    }
+
+    if  (functionExampleButton) {
+         functionExampleButton.addEventListener('click', function() {
+            let nombreuser = document.getElementById('nombreusuario').value;
+            function saludar(nombre) {
+                return "Hola, " + nombre + "!";
+            }
+            functionOutput.innerHTML = saludar(nombreuser);
+        });
+    }
+
+    if (operatorExampleButton) {
+        operatorExampleButton.addEventListener('click', function() {
+            const a = 10;
+            const b = 5;
+            const suma = a + b;
+            const resta = a - b;
+            const multiplicacion = a * b;
+            const division = a / b;
+            operatorOutput.innerHTML = `Suma: ${suma}<br>Resta: ${resta}<br>Multiplicación: ${multiplicacion}<br>División: ${division}`;
+        });
+    }
+
+    if (arrayExampleButton) {
+        arrayExampleButton.addEventListener('click', function() {
+            let frutas = ["manzana", "banana", "cereza"];
+            for (let i = 0; i < frutas.length; i++) {
+            console.log(frutas[i]);
+            }
+            arrayOutput.innerHTML = `Frutas en el array: ${frutas.join(', ')}`;   
+        })
     }
 });

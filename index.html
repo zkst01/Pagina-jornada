@@ -241,7 +241,7 @@ Potente para cálculos, aunque poco usado.</li></pre>
     <section>
         <h2>Ejemplos y Ejercicios.</h2>
         <section id="bucles">
-            <h2>Bucles</h2>
+            <h2>Bucles</h2> <!-- Faltan los bucle "while" y "do while"-->
             <p>Los bucles permiten ejecutar un bloque de código varias veces. Aquí hay un ejemplo de un bucle <code>for</code>:</p>
             <pre><code>for (let i = 0; i &lt; 5; i++) {
         console.log(i);
@@ -273,16 +273,43 @@ Potente para cálculos, aunque poco usado.</li></pre>
             <div id="resultadoBooleanos"></div>
         </section>
 
-        <section>
-                
+        <section id = "funciones">
+            <h2>Funciones</h2>
+            <p>Las funciones son bloques de código reutilizables. Aquí hay un ejemplo:</p>
+            <input type="text" id = nombreusuario placeholder="Ingresa su nombre">
+            <pre><code>function saludar(nombre) {
+        console.log("Hola, " + nombre + "!");
+                }</code></pre>
+            <button id="functionExample">Ejecutar Función</button>
+            <div id="resultadoFunciones"></div>
         </section>
 
-        <section>
-            <h2></h2>
+        <section id = "operadores">
+            <h2>Operadores</h2>
+            <p>Los operadores se utilizan para realizar operaciones en variables y valores. Aquí hay un ejemplo:</p>
+            <pre><code>const a = 10;
+const b = 5;
+const suma = a + b;
+const resta = a - b;
+const multiplicacion = a * b;
+const division = a / b;</code></pre>
+            <button id="operatorExample">Ejecutar Operadores</button>
+            <div id="resultadoOperadores"></div>
+        </section>
+
+        <section id="arrays">
+            <h2>Arrays</h2>
+            <p>Los arrays son estructuras de datos que almacenan múltiples valores en una sola variable. Aquí hay un ejemplo:</p>
+            <pre><code>let frutas = ["manzana", "banana", "cereza"];
+for (let i = 0; i &lt; frutas.length; i++) {
+console.log(frutas[i]);
+}</code></pre>
+            <button id="arrayExample">Ejecutar Array</button>
+            <div id="resultadoArrays"></div>
         </section>
     </section>
     
-
+<!-- Ariel, tenes que corregir algunas cosas, no me gusta html -->
 
     <script src="script.js"></script>
 </body>
