@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const arrayExampleButton = document.getElementById('arrayExample');
     const arrayOutput = document.getElementById('resultadoArrays');
 
+    
+
     if (loopExampleButton) {
         loopExampleButton.addEventListener('click', function() {
             bucleOutput.innerHTML = '';
@@ -72,3 +74,11 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 });
+for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    
+}
+
+do {
+    
+} while (condition);
