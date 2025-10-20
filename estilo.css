@@ -82,3 +82,44 @@ button:hover {
     font-family: 'Courier New', Courier, monospace;
     overflow-x: auto;
 }
+
+#resultadoBucles {
+    color: #ffffff;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+#resultadoBucle2 {
+    color: #ffffff;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+#resultadoBucledo {
+    color: #ffffff;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+#resultadoCondicionales {
+    color: #ffffff;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+#resultadoBooleanos {
+    color: #ffffff;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+#resultadoFunciones {
+    color: #ffffff;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+#resultadoOperadores {
+    color: #ffffff;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
+#resultadoArrays {
+    color: #ffffff;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+}
