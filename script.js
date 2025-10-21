@@ -11,8 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const operatorOutput = document.getElementById('resultadoOperadores');
     const arrayExampleButton = document.getElementById('arrayExample');
     const arrayOutput = document.getElementById('resultadoArrays');
-
-    
+    const loop2exampleButton = document.getElementById('loop2Example');
+    const resultadoBucle2 = document.getElementById('resultadoBucle2');
+    const bucleDoExampleButton = document.getElementById('loopdoExample');
+    const resultadoBucleDo = document.getElementById('resultadoBucledo');
 
     if (loopExampleButton) {
         loopExampleButton.addEventListener('click', function() {
@@ -73,12 +75,27 @@ document.addEventListener('DOMContentLoaded', function() {
             arrayOutput.innerHTML = `Frutas en el array: ${frutas.join(', ')}`;   
         })
     }
-});
-for (let index = 0; index < array.length; index++) {
-    const element = array[index];
-    
-}
 
-do {
-    
-} while (condition);
+    if (loop2exampleButton) {
+        loop2exampleButton.addEventListener('click', function() {
+            resultadoBucle2.innerHTML = '';
+            let i = 1;
+            while (i <= 5) {
+                resultadoBucle2.innerHTML += `Iteración del bucle: ${i}<br>`;
+                i++;
+            }
+        });
+    }    
+
+    if (bucleDoExampleButton) {
+        bucleDoExampleButton.addEventListener('click', function() {
+            resultadoBucleDo.innerHTML = '';
+            let i = 1;
+            do {
+                resultadoBucleDo.innerHTML += `Iteración: ${i}<br>`;
+                i++;
+            } while (i <= 5);
+        });
+    }
+
+});    
