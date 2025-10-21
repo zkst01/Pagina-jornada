@@ -40,10 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    if  (functionExampleButton) {
-         functionExampleButton.addEventListener('click', function() {
+    if (functionExampleButton) {
+        functionExampleButton.addEventListener('click', function() {
             let nombreuser = document.getElementById('nombreusuario').value;
             function saludar(nombre) {
+                if (nombre === "" || nombre == null) {
+                    return "Ingresa un nombre válido.";
+                }
                 return "Hola, " + nombre + "!";
             }
             functionOutput.innerHTML = saludar(nombreuser);
