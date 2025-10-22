@@ -134,7 +134,7 @@ Fácil de integrar en otros programas.</pre>
     <section id="for">
         <h2>Ejemplos y Ejercicios.</h2>
         <section id="bucles">
-            <h2>Bucles</h2> <!-- Fal|tan los bucle "while" y "do while"-->
+            <h2>Bucle "for"</h2>
             <p>Los bucles permiten ejecutar un bloque de código varias veces. Aquí hay un ejemplo de un bucle <code>for</code>:</p>
             <pre><code>for (let i = 0; i &lt; 5; i++) {
         console.log(i);
@@ -144,7 +144,7 @@ Fácil de integrar en otros programas.</pre>
         </section>
 
         <section id="while">
-                <h2>Bucles con condicional "While"</h2>
+                <h2>Bucle "While"</h2>
                 <p>Los bucles con condicional while (mientras) permiten ejecutas un bloque de codigo varias veces pero hasta que se deje de cumplir la condicion</p>
                 <pre><code>let i = 1;
 while (i <= 5) {
@@ -229,70 +229,192 @@ console.log(frutas[i]);
     
     <section id="Nivel-facil">
         <h2>Dificultad Facil</h2>
+
         <section id="Actividad-1-choise">
-        
+            <h3>Actividad 1</h3>
+            <p>¿Qué hace este código?</p>
+            <pre><code>for (let i = 0; i < 3; i++) {
+    console.log(i);
+}</code></pre>
+            <form>
+                <label><input type="radio" name="q1"> Es una condición if</label><br>
+                <label><input type="radio" name="q1" data-correct="true"> Es un bucle for que imprime 0,1,2</label><br>
+                <label><input type="radio" name="q1"> Declara una función</label><br>
+            </form>
         </section>
 
         <section id="Actividad-2-choise">
-
+            <h3>Actividad 2</h3>
+            <p>¿Qué resultado produce este código?</p>
+            <pre><code>const resultado = (5 == '5');</code></pre>
+            <form>
+                <label><input type="radio" name="q2"> Lanza un error de sintaxis</label><br>
+                <label><input type="radio" name="q2"> false — comparación estricta (===)</label><br>
+                <label><input type="radio" name="q2" data-correct="true"> true — compara valores sin tipo (==)</label><br>
+            </form>
         </section>
 
         <section id="Actividad-3-choise">
-
+            <h3>Actividad 3</h3>
+            <p>¿Qué hace esta función?</p>
+            <pre><code>function saludar(nombre) {
+    return "Hola, " + nombre + "!");
+}</code></pre>
+            <form>
+                <label><input type="radio" name="q3" data-correct="true"> Retorna un saludo personalizado</label><br>
+                <label><input type="radio" name="q3"> Inserta un elemento en un array</label><br>
+                <label><input type="radio" name="q3"> Compara dos números</label><br>
+            </form>
         </section>
 
         <section id="Actividad-4-choise">
-
+            <h3>Actividad 4</h3>
+            <p>¿Qué hace este fragmento?</p>
+            <pre><code>let frutas = ['manzana','banana'];
+frutas.push('cereza');</code></pre>
+            <form>
+                <label><input type="radio" name="q4"> Ordena el array alfabéticamente</label><br>
+                <label><input type="radio" name="q4"> Elimina el primer elemento (shift)</label><br>
+                <label><input type="radio" name="q4" data-correct="true"> Añade 'cereza' al final del array (push)</label><br>
+            </form>
         </section>
 
         <section id="Actividad-5-choise">
-
+            <h3>Actividad 5</h3>
+            <p>¿Qué valor tendrá la variable?</p>
+            <pre><code>let x = true && false;</code></pre>
+            <form>
+                <label><input type="radio" name="q5"> true — operador OR</label><br>
+                <label><input type="radio" name="q5" data-correct="true"> false — operador lógico AND</label><br>
+                <label><input type="radio" name="q5"> undefined — no está inicializada</label><br>
+            </form>
         </section>
 
         <section id="Actividad-6-choise">
-
+            <h3>Actividad 6</h3>
+            <p>¿Qué hace esta instrucción?</p>
+            <pre><code>let n = Math.floor(Math.random() * 10);</code></pre>
+            <form>
+                <label><input type="radio" name="q6" data-correct="true"> Genera un entero aleatorio entre 0 y 9</label><br>
+                <label><input type="radio" name="q6"> Siempre genera 10</label><br>
+                <label><input type="radio" name="q6"> Convierte un número a cadena</label><br>
+            </form>
         </section>
     </section>
 
     <section id="Nivel-medio">
         <h2>Dificultad Medio</h2>
-        <section id="Actividad-7-completar">
 
+        <section id="Actividad-1-completar">
+            <h3>Actividad 1</h3>
+            <p>Completa la palabra que falta para declarar la variable:</p>
+            <pre><code>_____ x = 5;
+for (let i = 0; i < x; i++) {
+    console.log(i);
+}</code></pre>
+            <form>
+                <label>Respuesta: <input type="text" name="a7" placeholder="Escribe la palabra que falta"></label>
+                <button type="button">Comprobar</button>
+            </form>
         </section>
 
-        <section id="Actividad-8-completar">
-
+        <section id="Actividad-2-completar">
+            <h3>Actividad 2</h3>
+            <p>Indica la palabra que falta para crear el bucle que suma números:</p>
+            <pre><code>let sum = 0;
+_____ (let i = 1; i <= 5; i++) {
+    sum += i;
+}
+console.log(sum);</code></pre>
+            <form>
+                <label>Respuesta: <input type="text" name="a8" placeholder="Escribe la palabra que falta"></label>
+                <button type="button">Comprobar</button>
+            </form>
         </section>
 
-        <section id="Actividad-9-completar">
-
+        <section id="Actividad-3-completar">
+            <h3>Actividad 3</h3>
+            <p>Falta la instrucción que devuelve el valor dentro de la función:</p>
+            <pre><code>function doble(n) {
+    _____ n * 2;
+}
+console.log(doble(4));</code></pre>
+            <form>
+                <label>Respuesta: <input type="text" name="a9" placeholder="Escribe la palabra que falta"></label>
+                <button type="button">Comprobar</button>
+            </form>
         </section>
 
-        <section id="Actividad-10-completar">
-
+        <section id="Actividad-4-completar">
+            <h3>Actividad 4</h3>
+            <p>¿Qué método falta para añadir un elemento al final del array?</p>
+            <pre><code>let frutas = ['manzana', 'banana'];
+frutas.____('cereza'); // agrega al final
+console.log(frutas);</code></pre>
+            <form>
+                <label>Respuesta: <input type="text" name="a10" placeholder="Escribe el método que falta"></label>
+                <button type="button">Comprobar</button>
+            </form>
         </section>
 
-        <section id="Actividad-11-completar">
-
+        <section id="Actividad-5-completar">
+            <h3>Actividad 5</h3>
+            <p>Completa la palabra que falta para que el bucle se ejecute mientras la condición se cumpla:</p>
+            <pre><code>let i = 0;
+_____ (i < 3) {
+    console.log(i);
+    i++;
+}</code></pre>
+            <form>
+                <label>Respuesta: <input type="text" name="a11" placeholder="Escribe la palabra que falta"></label>
+                <button type="button">Comprobar</button>
+            </form>
         </section>
     </section>
 
     <section id="Nivel-dificil">
         <h2>Dificultad Dificil</h2>
-        <section id="Actividad-12-hacer">
-
+        <section id="Actividad-1-hacer">
+            <h3>Actividad 1</h3>
+            <p>Escribe un programa que imprima "HOLA MUNDO" usando <code>let</code></p>
+            <textarea id="a12-code" rows="8" cols="80"></textarea>
+            <div>
+                <button type="button" id="run-a12">Ejecutar</button>
+            </div>
+            <pre id="a12-output"></pre>
         </section>
 
-        <section id="Actividad-13-hacer">
-
+        <section id="Actividad-2-hacer">
+            <h3>Actividad 2</h3>
+            <P>Escribe un programa donde el usuario tenga que ingresar 2 numeros y que esos numeros se sumen, se resten, se mulptipliquen y se dividan
+                usando <code>promp</code> y <code>alert</code>
+            </P>
+            <textarea id="a12-code" rows="8" cols="80"></textarea>
+            <div>
+                <button type="button" id="run-a12">Ejecutar</button>
+            </div>
+            <pre id="a12-output"></pre>
         </section>
 
-        <section id="Actividad-14-hacer">
-
+        <section id="Actividad-3-hacer">
+            <h3>Actividad 3</h3>
+            <p>Escribe un programa que imprima los números del 1 al 10 usando un bucle <code>for</code>.</p>
+            <textarea id="a12-code" rows="8" cols="80"></textarea>
+            <div>
+                <button type="button" id="run-a12">Ejecutar</button>
+            </div>
+            <pre id="a12-output"></pre>
         </section>
 
-        <section id="Actividad-15-hacer">
-
+        <section id="Actividad-4-hacer">
+            <h3>Actividad 4</h3>
+            <p>Escribe un programa que pida al usuario un número y calcule su factorial usando un bucle <code>while</code>.</p>
+            <P>Un factorial es la multiplicacion de todos sus numeros menores hasta el 1. EJ: <code>5x4x3x2x1</code></P>
+            <textarea id="a12-code" rows="8" cols="80"></textarea>
+            <div>
+                <button type="button" id="run-a12">Ejecutar</button>
+            </div>
+            <pre id="a12-output"></pre>
         </section>
     </section>
 
