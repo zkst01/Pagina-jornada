@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const operatorOutput = document.getElementById('resultadoOperadores');
     const arrayExampleButton = document.getElementById('arrayExample');
     const arrayOutput = document.getElementById('resultadoArrays');
-    const loop2exampleButton = document.getElementById('loop2Example');
+    const loop2exampleButton = document.getElementById('loop2example');
     const resultadoBucle2 = document.getElementById('resultadoBucle2');
     const bucleDoExampleButton = document.getElementById('loopdoExample');
     const resultadoBucleDo = document.getElementById('resultadoBucledo');
@@ -214,13 +214,21 @@ document.addEventListener('DOMContentLoaded', function() {
         // Validadores para cada actividad
         const validadores = {
             'Actividad-1-hacer': (codigo) => {
+                const logs = [];
+                const originalLog = console.log;
+                console.log = (...args) => {
+                    const msg = args.map(String).join(' ');
+                    logs.push(msg);
+                    if (typeof output !== 'undefined' && output) output.textContent += msg + '\n';
+                };
                 try {
                     eval(codigo);
-                    const resultado = output.textContent.trim();
-                    return resultado == "HOLA MUNDO";
-                } catch(e) {
+                } catch (e) {
                     return false;
+                } finally {
+                    console.log = originalLog;
                 }
+                return logs.some(l => l.toLowerCase().trim() === 'hola mundo');
             },
             'Actividad-2-hacer': (codigo) => {
                 try {
