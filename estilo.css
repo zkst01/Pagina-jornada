@@ -2,7 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #150000;
+    background-color: #410133c5;
+    background: linear-gradient(145deg, rgba(65,1,51,0.85) 0%, rgba(0,180,204,0.9) 100%, rgba(0,180,204,0.6) 300%);
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
+    transition: background 0.4s ease;
 }
 
 h1, h2 {
@@ -13,6 +18,11 @@ h1, h2 {
 h3 {
     color: #ffffff;
     text-align: left;
+    font-style: italic;
+}
+h2 {
+    color: #ffffff;
+    font-style: italic;
 }
 
 p, pre {

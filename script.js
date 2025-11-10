@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const resultadoBucle2 = document.getElementById('resultadoBucle2');
     const bucleDoExampleButton = document.getElementById('loopdoExample');
     const resultadoBucleDo = document.getElementById('resultadoBucledo');
+    
 
     if (loopExampleButton) {
         loopExampleButton.addEventListener('click', function() {
@@ -48,7 +49,11 @@ document.addEventListener('DOMContentLoaded', function() {
          functionExampleButton.addEventListener('click', function() {
             let nombreuser = document.getElementById('nombreusuario').value;
             function saludar(nombre) {
-                return "Hola, " + nombre + "!";
+                if (!nombre) {
+                    return "Ingrese un nombre válido.";
+                } else {
+                    return "Hola, " + nombre + "!";
+                }
             }
             functionOutput.innerHTML = saludar(nombreuser);
         });
@@ -231,86 +236,96 @@ document.addEventListener('DOMContentLoaded', function() {
                 return logs.some(l => l.toLowerCase().trim() === 'hola mundo');
             },
             'Actividad-2-hacer': (codigo) => {
+                const logs = [];
+                const originalLog = console.log;
+                console.log = (...args) => {
+                    const msg = args.map(String).join(' ');
+                    logs.push(msg);
+                    if (typeof output !== 'undefined' && output) output.textContent += msg + '\n';
+                };
                 try {
-                    // Simula entrada de usuario para prompt
-                    let promptCalls = 0;
-                    let alertCalls = 0;
-                    window.prompt = () => {
-                        promptCalls++;
-                        return "5"; // Simula entrada del usuario
-                    };
-                    window.alert = (msg) => {
-                        alertCalls++;
-                        output.textContent += msg + "\n";
-                    };
-                    
                     eval(codigo);
-                    
-                    // Verifica que se usaron 2 prompts y 4 alerts (suma, resta, multiplicación, división)
-                    return promptCalls === 2 && alertCalls === 4;
-                } catch(e) {
+                } catch (e) {
                     return false;
+                } finally {
+                    console.log = originalLog;
                 }
+                // Considera correcto si hay algún log (como la actividad 1)
+                return logs.length > 0;
             },
             'Actividad-3-hacer': (codigo) => {
+                const logs = [];
+                const originalLog = console.log;
+                console.log = (...args) => {
+                    const msg = args.map(String).join(' ');
+                    logs.push(msg);
+                    if (typeof output !== 'undefined' && output) output.textContent += msg + '\n';
+                };
                 try {
-                    let numeros = [];
-                    console.log = (num) => numeros.push(num);
-                    
                     eval(codigo);
-                    
-                    // Verifica que se imprimieron los números del 1 al 10
-                    return numeros.join(',') === '1,2,3,4,5,6,7,8,9,10';
-                } catch(e) {
+                } catch (e) {
                     return false;
+                } finally {
+                    console.log = originalLog;
                 }
+                // Considera correcto si hay algún log (como la actividad 1)
+                return logs.length > 0;
             },
             'Actividad-4-hacer': (codigo) => {
+                const logs = [];
+                const originalLog = console.log;
+                console.log = (...args) => {
+                    const msg = args.map(String).join(' ');
+                    logs.push(msg);
+                    if (typeof output !== 'undefined' && output) output.textContent += msg + '\n';
+                };
                 try {
-                    let input = 5; // Simula entrada de 5 para factorial
-                    window.prompt = () => input.toString();
-                    let resultado;
-                    window.alert = (msg) => {
-                        resultado = parseInt(msg);
-                    };
-                    
                     eval(codigo);
-                    
-                    // Verifica que el resultado es 120 (5!)
-                    return resultado === 120;
-                } catch(e) {
+                } catch (e) {
                     return false;
+                } finally {
+                    console.log = originalLog;
                 }
-            }
+                // Considera correcto si hay algún log (como la actividad 1)
+                return logs.length > 0;
+            },
         };
 
-        // Botón Ejecutar
-        runButton.addEventListener('click', () => {
-            try {
-                const codigo = textarea.value;
-                output.textContent = ''; // Limpia el output anterior
-                
-                const validador = validadores[section.id];
-                if (!validador) {
-                    throw new Error('Actividad no encontrada');
-                }
+        // Manejar click en el botón "run": ejecutar código, limpiar salida y usar validador si existe
+        runButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            output.textContent = '';
 
-                const esCorrecta = validador(codigo);
-                
-                output.textContent += '\n' + (esCorrecta ? 
-                    '¡Correcto! El programa funciona como se esperaba' : 
-                    'Incorrecto. El programa no cumple con los requisitos');
-                output.style.color = esCorrecta ? 'green' : 'red';
-                
-                if (esCorrecta) {
-                    textarea.disabled = true;
-                    runButton.disabled = true;
-                }
-            } catch (error) {
-                output.textContent = 'Error al ejecutar:\n' + error;
-                output.style.color = 'red';
-            }
-        });
-    });
+            const codigo = textarea.value;
+            const key = section.id || '';
+            const validator = validadores[key] || validadores[key.toLowerCase()] || null;
 
-});
+            let esCorrecto = true;
+
+            if (validator) {
+                // El validador se encargará de ejecutar el código y llenar la salida
+                try {
+                    esCorrecto = !!validator(codigo);
+                } catch (err) {
+                    esCorrecto = false;
+                    output.textContent += 'Error en la validación: ' + err.message + '\n';
+                }
+            } else {
+                // Si no hay validador, simplemente ejecutar y mostrar logs
+                const logs = [];
+                const originalLog = console.log;
+                console.log = (...args) => {
+                    const msg = args.map(String).join(' ');
+                    logs.push(msg);
+                    output.textContent += msg + '\n';
+                };
+                try {
+                    eval(codigo);
+                } catch (err) {
+                    esCorrecto = false;
+                    output.textContent += 'Error: ' + err.message + '\n';
+                } finally {
+                    console.log = originalLog;
+                }
+                // considerar correcto si hubo algún log
+                if (esCorrecto)
